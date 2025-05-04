@@ -1,0 +1,16 @@
+section {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    background-color: #bb9445;
+
+    app-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2000;
+        display: flex;
+        justify-content: center;
+    }
+}
