@@ -2,7 +2,10 @@ section {
     width: 100%;
     display: block;
     overflow: hidden;
-    background-color: #bb9445;
+    background-color: #f0eeea;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     app-header {
         position: fixed;
@@ -15,7 +18,47 @@ section {
     }
 
     app-index{
-        position: absolute;
-        top: 334px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1440px;
+        width: 100%;
+    }
+
+    app-apartments{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1440px;
+        width: 100%;
+    }
+
+    app-zimmer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1440px;
+        width: 100%;
+    }
+
+    app-contactform{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1440px;
+        width: 100%;
+    }
+
+    app-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1440px;
+        width: 100%;
     }
 }
