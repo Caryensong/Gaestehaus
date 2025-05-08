@@ -1,18 +1,15 @@
 
 .kontakt {
-    /* background-color: #fcfcfca6; */
-    height: 600px;
     display: flex;
-    flex-direction: row;
-    min-width: 92%;
     gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .contact_content {
     width: 50%;
-    padding: 50px 50px 33px 50px;
+    padding: 79px 50px 50px 50px;
     display: flex;
-    align-items: flex-end;
     justify-content: flex-end;
 }
 
@@ -34,9 +31,12 @@ form {
 }
 
 label input, textarea{
-    width: 96%;
+    width: 100%;
 }
 
+iframe {
+    height: 100%;
+}
 input {
     height: 50px;
     font-size: 20px;
@@ -63,4 +63,34 @@ textarea {
 textarea:focus {
     border: 1px solid #063900cb;
     box-shadow: 0px 0px 5px rgba(42, 171, 226, 0.151);
+}
+
+button {
+    background-color: #023019;
+    border: 1px solid #ffffffa6;
+    border-radius: 8px 8px 8px 8px;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+    .contact_content,
+    .form_content {
+        width: 100%;
+        padding:67px 10px 10px 10px;
+    }
+
+    iframe {
+        height: 100%;
+    }
+
+    form {
+        padding: 20px;
+    }
 }

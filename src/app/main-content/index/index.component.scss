@@ -24,13 +24,14 @@ header {
 .home {
   background-color: #ffffff;
   height: 25rem;
-  width: 80rem;
+  max-width: 1440px;
+  width: 100%;
   padding: 50px;
   display: flex;
   gap: 20px;
   border-radius: 20px 20px 0 0;
   position: relative;
-  top: -200px;
+  top: -74px;
   color: #023019;
 }
 .home_img {
@@ -47,16 +48,17 @@ header {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 2s ease-in-out, transform 3s ease-in-out;
   transform: translateX(20px);
+  transition: opacity 2s ease-in-out, transform 3s ease-in-out;
   border-radius: 10px;
+  z-index: 1;
 }
 
 .home_img img.active {
   opacity: 1;
   transform: translateX(0);
+  z-index: 2;
 }
-
 .home_text {
   width: 50%;
 }
@@ -75,14 +77,15 @@ header {
 .ausstattung_content {
   background-color: #ffffff;
   height: 25rem;
-  width: 80rem;
+  max-width: 1440px;
+    width: 100%;
   padding: 50px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   border-radius: 0 0 20px 20px;
   position: relative;
-  top: -200px;
+  top: -75px;
   color: #023019;
 }
 .box_content {
