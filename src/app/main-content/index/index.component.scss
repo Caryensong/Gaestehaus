@@ -7,7 +7,7 @@
   object-fit: cover;
   width: 100%;
   display: block;
-  height: 100%;
+  height: auto;
   border-radius: 0 0;
 }
 
@@ -23,7 +23,8 @@ header {
 /* home */
 .home {
   background-color: #ffffff;
-  height: 25rem;
+  min-height: 25rem;
+  height: auto;
   max-width: 1440px;
   width: 100%;
   padding: 50px;
@@ -100,4 +101,25 @@ header {
 }
 .box_content img {
   width: 25px;
+}
+
+
+@media (max-width: 768px) {
+  .home_img,
+  .home_text {
+    width: 100%;
+  }
+
+  .home {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .ausstattung_content {
+    padding: 20px;
+  }
+
+  .box_content {
+    flex-direction: column;
+  }
 }
