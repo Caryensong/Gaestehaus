@@ -18,32 +18,14 @@ section {
         justify-content: center;
     }
 
-    app-index{
+    app-index, app-apartments, app-zimmer{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-width: 1440px;
         width: 100%;
-    }
-
-    app-apartments{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-width: 1440px;
-        width: 100%;
-    }
-
-    app-zimmer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-width: 1440px;
-        width: 100%;
-    }
+        max-width: 1440px; 
+      }
 
     app-contactform{
         display: flex;

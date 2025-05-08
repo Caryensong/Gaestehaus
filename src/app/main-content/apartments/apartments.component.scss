@@ -1,16 +1,15 @@
 
 .appartments_content {
     background-color: #fff;
-    height: 25rem;
+    height: auto;
     padding: 50px;
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 25px;
     max-width: 1440px;
     width: 100%;
     position: relative;
-    top: -104px;
+    top: -40px;
     border-radius: 20px;
 }
 
@@ -51,10 +50,17 @@ button {
     border: 1px solid #ffffffa6;
     border-radius: 8px 8px 8px 8px;
     padding: 10px;
+    margin-top: 20px;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     cursor: pointer;
+    transition: all 0.3s ease; 
+
+    &:hover{
+        background-color: #99a361; ;
+    }
 }
+
