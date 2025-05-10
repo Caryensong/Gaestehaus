@@ -1,6 +1,6 @@
 .content {
-  width: 100%;
-  max-width: 1440px;
+  height:100% ;
+  display: flex;
 }
 
 .content img {
@@ -9,16 +9,13 @@
   display: block;
   height: auto;
   border-radius: 0 0;
+      flex-basis: 100%;
+    flex-shrink: 0;
+    height: 100%;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  top: 450px;
-  color: #fff;
+h1 {
+font-size: 30px;
 }
 /* home */
 .home {

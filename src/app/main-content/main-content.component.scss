@@ -1,46 +1,60 @@
 section {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  background-color: #f0eeea;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: block;
-    overflow: hidden;
-    background-color: #f0eeea;
+    z-index: 2000;
     display: flex;
     justify-content: center;
+  }
+
+  .img_content {
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
+  }
+
+  .img_content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  app-index,
+  app-apartments,
+  app-zimmer {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+  }
 
-    app-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 2000;
-        display: flex;
-        justify-content: center;
-    }
+  app-contactform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1440px;
+    width: 100%;
+  }
 
-    app-index, app-apartments, app-zimmer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 1440px; 
-      }
-
-    app-contactform{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 1440px;
-        width: 100%;
-    }
-
-    app-footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-width: 1440px;
-        width: 100%;
-    }
+  app-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 1440px;
+    width: 100%;
+  }
 }
