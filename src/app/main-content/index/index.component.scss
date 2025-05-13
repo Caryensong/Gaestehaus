@@ -1,17 +1,15 @@
 .content {
-  height:100% ;
-  display: flex;
-}
+position: absolute;
+top: 140px;
+padding-left: 240px;
+font-family: 'lavishly', cursive;
+color: #023019;
+font-size: 3rem;
 
-.content img {
-  object-fit: cover;
-  width: 100%;
-  display: block;
-  height: auto;
-  border-radius: 0 0;
-      flex-basis: 100%;
-    flex-shrink: 0;
-    height: 100%;
+.title{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 4rem;
+}
 }
 
 h1 {

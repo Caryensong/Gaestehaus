@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, AfterViewInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-zimmer',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   standalone: true,
   templateUrl: './zimmer.component.html',
   styleUrls: ['./zimmer.component.scss']
