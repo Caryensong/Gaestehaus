@@ -1,0 +1,91 @@
+
+.box{
+    padding: 100px 50px 50px 50px;
+}
+
+.img_box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.img_box img{
+    width: 300px;
+    object-fit: cover;
+    height: 200px;
+}
+
+.preisliste{
+    color: #023019;
+    width: 100%;
+    display: flex;
+    gap: 405px;
+    padding-left: 50px;
+}
+.s_w_preise{
+    display: flex;
+    gap: 20px;
+}
+.preis_content{
+    background-color: #fcfcfca6;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.wohnung_content{
+color: #023019;
+display: flex;
+gap: 80px;
+padding: 0 50px 0 50px;
+}
+.wohnung_content1{
+    color: #023019;
+    display: flex;
+    gap: 73px;
+    padding-left: 050px;
+    }
+    
+
+.mySlides {
+
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    transition: 0.5s ease;
+    margin: auto;
+  }
+
+  .demo {
+    cursor: pointer;
+    opacity: 0.6;
+    width: 50px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+    border-radius: 4px;
+  }
+
+  .demo:hover,
+  .active-thumb {
+    opacity: 1;
+  }
+
+  .thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .preisliste1{
+    color: #023019;
+    width: 100%;
+    display: flex;
+    gap: 183px;
+    padding-left: 050px;
+}

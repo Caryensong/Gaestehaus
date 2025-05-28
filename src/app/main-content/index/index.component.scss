@@ -25,7 +25,7 @@ font-size: 30px;
   padding: 50px;
   display: flex;
   gap: 20px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 2px 2px 0 0;
   position: relative;
   top: -74px;
   color: #023019;
@@ -72,14 +72,13 @@ font-size: 30px;
 /* ausstattung */
 .ausstattung_content {
   background-color: #ffffff;
-  height: 25rem;
   max-width: 1440px;
-    width: 100%;
+  width: 100%;
   padding: 50px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 2px 2px;
   position: relative;
   top: -75px;
   color: #023019;

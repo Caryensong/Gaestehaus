@@ -1,66 +1,80 @@
-
 .appartments_content {
-    background-color: #fff;
-    height: auto;
-    padding: 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-    max-width: 1440px;
+  height: auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  max-width: 1440px;
+  width: 100%;
+  position: relative;
+  top: -40px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rooms_content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.rooms_box {
+  width: 35%;
+  height: 26rem;
+  border: 1px solid #02301941;
+  img {
     width: 100%;
-    position: relative;
-    top: -40px;
-    border-radius: 20px;
+    background-size: cover;
+  }
+}
+
+.bed_info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.bed_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+
+  gap: 10px;
+
+  img {
+    width: 1.6rem;
+  }
 }
 
 .appartments_text {
-    width: 50%;
-    color: #023019;
-    border-radius: 10px;
+  width: 50%;
+  color: #023019;
+  border-radius: 10px;
 }
 
-.appartments_img {
-    position: relative;
-    width: 50%;
-    height: 340px;
-    overflow: hidden;
-    border-radius: 10px;
+a {
+  text-decoration: none;
 }
 
-.appartments_img img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 2s ease-in-out, transform 3s ease-in-out;
-    transform: translateX(20px);
-    border-radius: 10px;
-}
-
-.appartments_img img.active {
-    opacity: 1;
-    transform: translateX(0);
-}
-a{
-    text-decoration: none;
-}
 button {
-    background-color: #023019;
-    border: 1px solid #ffffffa6;
-    border-radius: 8px 8px 8px 8px;
-    padding: 10px;
-    margin-top: 20px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease; 
+  background-color: #023019;
+  border: 1px solid #ffffffa6;
+  border-radius: 8px 8px 8px 8px;
+  padding: 10px;
+  margin-top: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
 
-    &:hover{
-        background-color: #99a361; ;
-    }
+  &:hover {
+    background-color: #99a361;
+  }
 }
-

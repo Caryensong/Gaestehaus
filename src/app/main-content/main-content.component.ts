@@ -8,7 +8,7 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-main-content',
-  imports: [HeaderComponent, IndexComponent, ApartmentsComponent, ZimmerComponent, ContactformComponent, FooterComponent],
+  imports: [IndexComponent, ApartmentsComponent, ZimmerComponent, ContactformComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

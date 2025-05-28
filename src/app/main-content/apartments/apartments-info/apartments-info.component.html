@@ -1,1 +1,72 @@
-<p>apartments-info works!</p>
+<section class="box">
+  <h3>Unsere Ferienwohnungen</h3>
+      <br />
+    <p>Wir haben insgesamt 5 Ferienwohnungen</p>
+    <p>Komfortable Apartments für Ihren perfekten Aufenthalt</p>
+    <p>
+      Erleben Sie echte österreichisch-bayerische Gemütlichkeit in unseren
+      liebevoll eingerichteten Apartments! Mit traditionellen Elementen und
+      einer warmen Atmosphäre bieten wir Ihnen ein authentisches Wohngefühl –
+      rustikal, charmant und einladend.
+    </p>
+  <div class="slideshow-container" style="max-width: 1440px; margin: auto;">
+
+    <!-- Große Bilder -->
+    <img
+      #slide
+      *ngFor="let n of [1,2,3,4,7,8,9]; let i = index"
+      class="mySlides"
+      [src]="'./assets/appartments/' + n + '.JPG'"
+      [style.display]="'none'"
+      style="width:500px; object-fit: contain;"
+    />
+
+    <!-- Thumbnails -->
+    <div class="thumbnails" style="display:flex;flex-wrap:wrap;margin-top:16px;gap:10px;">
+      <img
+        #thumb
+        *ngFor="let n of [1,2,3,4,7,8,9]; let i = index"
+        class="demo"
+        [src]="'./assets/appartments/' + n + '.JPG'"
+        style="width:100px;height:100px;cursor:pointer;"
+        (click)="currentSlide(i + 1)"
+      />
+    </div>
+
+  </div>
+</section>
+
+<section class="preis_content">
+  <div class="preisliste">
+    <h3>Preise</h3>
+    <h3>Preise Pro Nacht</h3>
+  </div>
+
+  <div class="wohnung_content">
+    <p><strong>3x</strong> Wohnung mit Doppelzimmer <br>+ Doppelschlafcouch in Wohn-/ Essbereich</p>
+    <div class="s_w_preise">
+      <p>Winter 100 - 120 €</p> |
+      <p>Sommer 60 €</p>
+    </div>
+  </div>
+
+  <div class="wohnung_content">
+    <p><strong>1x</strong> Wohnung mit Dreibettzimmer <br>+ Doppelschlafcouch in Wohn-/ Essbereich</p>
+    <div class="s_w_preise">
+      <p>Winter 110 - 130 €</p> |
+      <p>Sommer 70 €</p>
+    </div>
+  </div>
+
+  <div class="wohnung_content">
+    <p><strong>1x</strong> Wohnung mit Doppelzimmer 
+      <br> + eigener Dusche/WC 
+      <br> + Dreibettzimmer mit eigener Dusche/WC 
+      <br> (optional auch für 6 bis 7 Personen)
+    </p>
+    <div class="s_w_preise">
+      <p>Winter 120 - 150 €</p> |
+      <p>Sommer 80 €</p>
+    </div>
+  </div>
+</section>
