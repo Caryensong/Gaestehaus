@@ -21,6 +21,11 @@ footer {
 h4 {
   margin: 0;
 }
+
+a{
+  text-decoration: none;
+  color: #ffffffea;
+}
 .footer1 {
   padding-left: 50px;
   display: flex;
@@ -61,6 +66,7 @@ h4 {
 .footer3 img {
   width: 30px;
 }
+
 
 @media(max-width: 780px) {
   .footer3 {
