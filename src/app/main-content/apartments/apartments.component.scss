@@ -50,9 +50,7 @@
 }
 
 .appartments_text {
-  width: 50%;
   color: #023019;
-  border-radius: 10px;
 }
 
 a {
@@ -77,4 +75,25 @@ button {
   &:hover {
     background-color: #99a361;
   }
+}
+
+@media(max-width: 780px) {
+.rooms_content {
+flex-wrap: wrap;
+    gap: 54px;
+}
+.rooms_box {
+  width: 45%;
+}
+}
+
+@media(max-width: 654px) {
+.rooms_content {
+flex-wrap: wrap;
+    gap: 54px;
+}
+.rooms_box {
+  width: 100%;
+      height: 51vh;
+}
 }

@@ -1,26 +1,26 @@
-
 <section class="zimmer_content">
-    <div class="zimmer_text">
-        <h3>Unsere Pensionszimmer</h3><br>
-        <p>Wir haben insgesamt 4 Zimmern</p>
-        <p>Komfortable Apartments für Ihren perfekten Aufenthalt</p>
-        <p>Erleben Sie echte österreichisch-bayerische Gemütlichkeit in unseren liebevoll eingerichteten
-            Apartments! Mit traditionellen Elementen und einer warmen Atmosphäre bieten wir Ihnen ein
-            authentisches Wohngefühl – rustikal, charmant und einladend.</p>
+  <h3>Unsere Pensionszimmer</h3>
 
-      <button [routerLink]="['zimmerInfo']">Mehr Infos und Preise</button>
+  <div class="rooms_content">
+    <div class="rooms_box">
+      <img
+        src="./assets/zimmer/4.jpg"
+        alt="Appartments mit 3 Bettzimmer"
+      />
+      <div class="bed_info">
+        <div class="bed_content">
+          <img src="./assets/icon/icons8-bett-50.png" alt="Doppelbett" />
+        </div>
+        <p>
+          Max. 2 Personen <br />
+          Gemütliches Doppelzimmer mit zusätzlicher Doppelschlafcouch im Wohnbereich
+        </p>
+      </div>
+
+      <div class="bed_info bottom_info">
+        <h2>Alpen Duo</h2>
+        <button [routerLink]="['/apartmentInfo']">Mehr Infos und Preise</button>
+      </div>
     </div>
-    <div class="zimmer_img">
-        <img src="./assets/zimmer/2.jpg" alt="">
-        <img src="./assets/zimmer/1.jpg" alt="">
-        <img src="./assets/zimmer/3.jpg" alt="">
-        <img src="./assets/zimmer/4.jpg" alt="">
-        <img src="./assets/zimmer/5.jpg" alt="">
-        <img src="./assets/zimmer/6.jpg" alt="">
-        <img src="./assets/zimmer/7.jpg" alt="">
-        <img src="./assets/zimmer/8.jpg" alt="">
-        <img src="./assets/zimmer/9.jpg" alt="">
-        <img src="./assets/zimmer/10.jpg" alt="">
-        <img src="./assets/zimmer/11.jpg" alt="">
-    </div>
+  </div>
 </section>
