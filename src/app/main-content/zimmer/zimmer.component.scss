@@ -10,7 +10,7 @@
 
 .rooms_box {
   width: 25rem;
-  height: 50vh;
+  height: auto;
   border: 1px solid #02301941;
   img {
     width: 100%;
@@ -18,6 +18,12 @@
     object-fit: cover;
     background-size: cover;
   }
+}
+
+.rooms_content {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
 }
 
 .bed_info {
@@ -68,19 +74,34 @@ button {
 
   &:hover {
     background-color: #99a361;
+    color: #023019;
   }
 }
-@media(max-width: 780px) {
-.zimmer_content{
-  padding: 20px;
-}
+@media (max-width: 780px) {
+  .zimmer_content {
+    padding: 20px;
+  }
 }
 
-@media(max-width: 654px) {
-.rooms_box {
-  width: 100%;
-  height: 60vh;
-  border: 1px solid #02301941;
+@media (max-width: 654px) {
+  .rooms_box {
+    width: 100%;
+    border: 1px solid #02301941;
+  }
 
+  .rooms_content {
+    flex-wrap: wrap;
+    gap: 54px;
+  }
 }
+
+@media (max-width: 400px) {
+  .bed_info {
+    align-items: center;
+    flex-direction: column;
+    button {
+      margin-left: 0px;
+      margin-bottom: 40px;
+    }
+  }
 }
