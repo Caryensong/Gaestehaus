@@ -28,29 +28,30 @@ h4 {
   gap: 5px;
 }
 
-.footer_credits a {
+.footer_credits a, .footer_credits2 a {
   font-size: 15px;
   color: rgb(206, 206, 206);
 }
 
-.footer_credits {
+.footer_credits, .footer_credits2 {
   display: flex;
   align-items: flex-end;
-
   gap: 10px;
 }
 
-.footer_credits a:hover {
+.footer_credits a:hover, .footer_credits a:hover {
   text-decoration: underline;
   color: rgb(245, 255, 152);
 }
-a:hover {
-  color: rgb(245, 255, 152);
+
+.footer_credits2 {
+ display: none;
 }
 
 .footer3 {
   padding-right: 50px;
   filter: brightness(11.5);
+  text-align: end;
 }
 
 .footer3 img:hover {
@@ -59,4 +60,33 @@ a:hover {
 
 .footer3 img {
   width: 30px;
+}
+
+@media(max-width: 780px) {
+  .footer3 {
+    padding-right: 20px;
+}
+.footer1 {
+    padding-left: 20px;
+  }
+}
+
+@media(max-width: 600px) {
+.footer_credits{display:none;}
+.footer_credits2{display:flex;}
+
+footer{
+  flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media(max-width: 430px) {
+  .footer3 {
+    padding-right: 0px;
+}
+.footer1 {
+    padding-left: 0px;
+  }
 }
