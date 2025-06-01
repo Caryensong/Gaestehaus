@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-apartments-info',
@@ -8,40 +8,34 @@ import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@
   templateUrl: './apartments-info.component.html',
   styleUrl: './apartments-info.component.scss'
 })
-export class ApartmentsInfoComponent implements AfterViewInit {
+export class ApartmentsInfoComponent {
+ showOverlay = false;
+  overlayImage = '';
+  imageList = [1, 2, 3, 4, 5, 6, 7, 8];
+  currentIndex = 0;
 
-  slideIndex = 1;
-
-  @ViewChildren('slide') slides!: QueryList<ElementRef>;
-  @ViewChildren('thumb') thumbs!: QueryList<ElementRef>;
-
-  ngAfterViewInit(): void {
-    this.showSlide(this.slideIndex);
+  openOverlay(index: number): void {
+    this.currentIndex = index;
+    this.updateOverlayImage();
+    this.showOverlay = true;
   }
 
-  currentSlide(n: number): void {
-    this.slideIndex = n;
-    this.showSlide(n);
+  closeOverlay(): void {
+    this.showOverlay = false;
   }
 
-  showSlide(n: number): void {
-    const slidesArray = this.slides.toArray();
-    const thumbsArray = this.thumbs.toArray();
+  previousImage(): void {
+    this.currentIndex = (this.currentIndex - 1 + this.imageList.length) % this.imageList.length;
+    this.updateOverlayImage();
+  }
 
-    if (n > slidesArray.length) this.slideIndex = 1;
-    if (n < 1) this.slideIndex = slidesArray.length;
+  nextImage(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.imageList.length;
+    this.updateOverlayImage();
+  }
 
-    slidesArray.forEach(slide => {
-      slide.nativeElement.style.display = 'none';
-    });
-
-    thumbsArray.forEach(thumb => {
-      thumb.nativeElement.classList.remove('active-thumb');
-      thumb.nativeElement.style.opacity = '0.6';
-    });
-
-    slidesArray[this.slideIndex - 1].nativeElement.style.display = 'block';
-    thumbsArray[this.slideIndex - 1].nativeElement.classList.add('active-thumb');
-    thumbsArray[this.slideIndex - 1].nativeElement.style.opacity = '1';
+  private updateOverlayImage(): void {
+    const imageNumber = this.imageList[this.currentIndex];
+    this.overlayImage = `./assets/appartments/${imageNumber}.JPG`;
   }
 }

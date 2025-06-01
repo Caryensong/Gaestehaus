@@ -1,85 +1,96 @@
 <section class="container">
-
-<section class="box">
-  <h1>Unsere Ferienwohnungen</h1>
-      <br />
-    <p>Wir haben insgesamt 5 Ferienwohnungen</p><br>
+  <section class="box">
+    <h1>Unsere Ferienwohnungen</h1>
+    <br />
+    <p>Wir haben insgesamt 5 Ferienwohnungen</p>
+    <br />
     <p>
       Genießen Sie Ihren Aufenthalt in unseren komfortablen Ferienwohnungen im
-    Herzen von Österreich. Unsere Apartments bieten Ihnen eine perfekte
-    Kombination aus traditionellem Charme und modernem Komfort.
+      Herzen von Österreich. Unsere Apartments bieten Ihnen eine perfekte
+      Kombination aus traditionellem Charme und modernem Komfort.
     </p>
-  <div class="slideshow-container" style="max-width: 1440px; margin: auto; width:100%;">
-
-    <!-- Große Bilder -->
-    <img
-      #slide
-      *ngFor="let n of [1,2,3,4,5,7,8,9]; let i = index"
-      class="mySlides"
-      [src]="'./assets/appartments/' + n + '.JPG'"
-      [style.display]="'none'"
-      style="width:100%; object-fit: contain; height: auto;
-    padding-top: 50px;"
-    />
-
-    <!-- Thumbnails -->
-    <div class="thumbnails" style="display:flex; flex-wrap:wrap; margin-top:16px; gap:10px;">
-      <img
-        #thumb
-        *ngFor="let n of [1,2,3,4,5,7,8,9]; let i = index"
-        class="demo"
-        [src]="'./assets/appartments/' + n + '.JPG'"
-        style="width:100px;height:100px;cursor:pointer;"
-        (click)="currentSlide(i + 1)"
-      />
-    </div>
-
-  </div>
-</section>
-
-<section class="preis_content">
-  <div class="preisliste">
-    <h3>Preise</h3>
-    <h3>Preise Pro Nacht</h3>
-  </div>
-
-  <div class="wohnungsliste">
-    <div class="wohnung">
-      <div class="beschreibung">
-        <h4>Alpen Duo</h4>
-        <p><strong>3x</strong> Wohnung mit Doppelzimmer<br>+ Doppelschlafcouch in Wohn-/Essbereich</p>
+    <div
+      class="slideshow-container"
+      style="max-width: 1440px; margin: auto; width: 100%"
+    >
+      <!-- Overlay für großes Bild -->
+      <div class="image-overlay" *ngIf="showOverlay">
+        <button class="nav-btn close-btn" (click)="closeOverlay()">✕</button>
+        <button class="nav-btn left-btn" (click)="previousImage()">‹</button>
+        <img
+          [src]="overlayImage"
+          alt="Großansicht"
+          (click)="$event.stopPropagation()"
+        />
+        <button class="nav-btn right-btn" (click)="nextImage()">›</button>
       </div>
-      <div class="preise">
-        <p>Winter 100 - 120 €</p>
-        <p>Sommer 60 €</p>
+
+      <!-- Thumbnails -->
+      <div
+        class="thumbnails"
+        style="display: flex; flex-wrap: wrap; margin-top: 16px; gap: 10px"
+      >
+        <img
+          *ngFor="let n of [1, 2, 3, 4, 5, 6, 7, 8]; let i = index"
+            class="mySlides"
+          [src]="'./assets/appartments/' + n + '.JPG'"
+          style="width: 100px; height: 100px; cursor: pointer"
+          (click)="openOverlay(i)"
+        />
       </div>
     </div>
+  </section>
 
-    <div class="wohnung">
-      <div class="beschreibung">
-        <h4>Alpen Family Flat</h4>
-        <p><strong>1x</strong> Wohnung mit Dreibettzimmer<br>+ Doppelschlafcouch in Wohn-/Essbereich</p>
-      </div>
-      <div class="preise">
-        <p>Winter 110 - 130 €</p>
-        <p>Sommer 70 €</p>
-      </div>
+  <section class="preis_content">
+    <div class="preisliste">
+      <h3>Preise</h3>
+      <h3>Preise Pro Nacht</h3>
     </div>
 
-    <div class="wohnung">
-      <div class="beschreibung">
-        <h4>Komfort Duo Apartment</h4>
-        <p><strong>1x</strong> Wohnung mit Doppelzimmer<br>
-          + eigener Dusche/WC<br>
-          + Dreibettzimmer mit eigener Dusche/WC<br>
-          (optional auch für 6 bis 7 Personen)
-        </p>
+    <div class="wohnungsliste">
+      <div class="wohnung">
+        <div class="beschreibung">
+          <h4>Alpen Duo</h4>
+          <p>
+            <strong>3x</strong> Wohnung mit Doppelzimmer<br />+
+            Doppelschlafcouch in Wohn-/Essbereich
+          </p>
+        </div>
+        <div class="preise">
+          <p>Winter 100 - 120 €</p>
+          <p>Sommer 60 €</p>
+        </div>
       </div>
-      <div class="preise">
-        <p>Winter 120 - 150 €</p>
-        <p>Sommer 80 €</p>
+
+      <div class="wohnung">
+        <div class="beschreibung">
+          <h4>Alpen Family Flat</h4>
+          <p>
+            <strong>1x</strong> Wohnung mit Dreibettzimmer<br />+
+            Doppelschlafcouch in Wohn-/Essbereich
+          </p>
+        </div>
+        <div class="preise">
+          <p>Winter 110 - 130 €</p>
+          <p>Sommer 70 €</p>
+        </div>
+      </div>
+
+      <div class="wohnung">
+        <div class="beschreibung">
+          <h4>Komfort Duo Apartment</h4>
+          <p>
+            <strong>1x</strong> Wohnung mit Doppelzimmer<br />
+            + eigener Dusche/WC<br />
+            + Dreibettzimmer mit eigener Dusche/WC<br />
+            (optional auch für 6 bis 7 Personen)
+          </p>
+        </div>
+        <div class="preise">
+          <p>Winter 120 - 150 €</p>
+          <p>Sommer 80 €</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </section>
