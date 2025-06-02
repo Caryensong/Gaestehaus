@@ -1,83 +1,112 @@
-
 .kontakt {
-    display: flex;
-    gap: 10px;
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .contact_content {
-    width: 50%;
-    padding: 55px 30px 30px 30px;
-    display: flex;
-    justify-content: flex-end;
+  width: 50%;
+  padding: 55px 30px 30px 30px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.form_content{
-    display: flex;
-    padding: 30px 0px 30px 30px;
-    flex-direction: column;
-    color: #023019;
-    width: 50%;
+.form_content {
+  display: flex;
+  padding: 30px 0px 30px 30px;
+  flex-direction: column;
+  color: #023019;
+  width: 50%;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    padding: 50px;
-    background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  padding: 50px;
+  background-color: #fff;
 }
 
-label input, textarea{
-    width: 100%;
+label input,
+textarea {
+  width: 100%;
 }
 
 iframe {
-    height: 100%;
+  height: 100%;
 }
 input {
-    height: 50px;
-    font-size: 20px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid #d1d1d1;
-    padding-left: 20px; 
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #d1d1d1;
+  padding-left: 20px;
 }
 
 input:focus {
-    border: 1px solid #063900cb;
-    box-shadow: 0px 0px 5px rgba(42, 171, 226, 0.151);
+  border: 1px solid #063900cb;
+  box-shadow: 0px 0px 5px rgba(42, 171, 226, 0.151);
 }
 
 textarea {
-    height: 100px;
-    font-size: 20px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid #d1d1d1;
-    padding-left: 20px; 
+  height: 100px;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #d1d1d1;
+  padding: 10px 20px;
+}
+
+textarea.input-error {
+  border: 1px solid rgba(211, 0, 0, 0.534);
+
+  &::placeholder {
+    color: rgba(211, 0, 0, 0.534);
+  }
 }
 
 textarea:focus {
-    border: 1px solid #063900cb;
-    box-shadow: 0px 0px 5px rgba(42, 171, 226, 0.151);
+  border: 1px solid #063900cb;
+  box-shadow: 0px 0px 5px rgba(42, 171, 226, 0.151);
 }
 
-button {
-    background-color: #023019;
-    border: 1px solid #ffffffa6;
-    border-radius: 8px 8px 8px 8px;
-    padding: 10px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-      transition: all 0.3s ease;
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
+#check {
+  display: flex;
+  flex-direction: row;
+  width: 20px;
+}
+
+.disabled-button {
+  border: 1px solid #6a6a6a;
+  color: #6a6a6a;
+  box-shadow: 2px 3px 0 0 #6a6a6a;
+  cursor: not-allowed;
+}
+
+.enabled-btn {
+  background-color: #023019;
+  border: 1px solid #ffffffa6;
+  border-radius: 8px 8px 8px 8px;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enabled-btn:hover {
   &:hover {
     background-color: #99a361;
     color: #023019;
@@ -86,33 +115,36 @@ button {
 
 /* Responsive Anpassung */
 @media (max-width: 768px) {
-    .contact_content{
-        width: 100%;
-        padding:75px 0 0 0;
-    }
+  .contact_content {
+    width: 100%;
+    padding: 75px 0 0 0;
+  }
 
-    .form_content {
-        width: 100%;
-        padding:50px 0px 0px 0px;
-    }
+  .form_content {
+    width: 100%;
+    padding: 50px 0px 0px 0px;
+  }
 
-    iframe {
-        height: 100%;
-    }
+  iframe {
+    height: 100%;
+  }
 
-    form {
-        padding: 20px;
-    }
+  form {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 654px) {
-    .kontakt {
-        flex-direction: column;
-        gap:30px;
-    }
-    .contact_content{
-        width: 100%;
-        height: 40vh;
-        padding:0;
-    }
+  .kontakt {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .contact_content {
+    width: 100%;
+    height: 40vh;
+    padding: 0;
+  }
+  .checkbox {
+    font-size: 14px;
+  }
 }
