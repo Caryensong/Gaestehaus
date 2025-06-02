@@ -5,18 +5,18 @@
     <div class="logo">
       <img src="./assets/img/1.png" alt="Logo" />
     </div>
-    <nav>
+   <nav #nav>
       <a href="index.html">Home</a>
-      <a [routerLink]="['/apartmentInfo']" routerLinkActive="router-link-active" >Apartements</a>
-      <a [routerLink]="['zimmerInfo']" routerLinkActive="router-link-active" >Pensionszimmer</a>
-      <a href="index.html#contact">Kontakt</a>
-      <a href="#">Anreise</a>
+     <a [routerLink]="['/apartmentInfo']" (click)="toggleMenu()">Apartements</a>
+
+      <a [routerLink]="['zimmerInfo']" routerLinkActive="router-link-active" (click)="toggleMenu()">Pensionszimmer</a>
+      <a href="#contact" (click)="toggleMenu()">Kontakt</a>
       <a class="phone-btn" href="tel:+4354438419">
         <img src="./assets/icon/phone.png" width="20" height="20" alt="phone" />
         Anrufen
       </a>
     </nav>
-    <div class="burger-menu" id="burgerMenu" (click)="toggleMenu()">
+    <div class="burger-menu" #burger (click)="toggleMenu()">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
