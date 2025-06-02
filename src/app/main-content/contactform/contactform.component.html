@@ -1,11 +1,11 @@
 <section class="kontakt">
   <div id="contact" class="form_content">
     <h2>Schreiben Sie uns</h2>
-    <form #contactForm="ngForm">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <label>
         <input
           type="text"
-          name="Name"
+          name="name"
           #name="ngModel"
           [placeholder]="'Ihr Name*'"
           [(ngModel)]="contactData.name"
@@ -14,12 +14,13 @@
       </label>
       <label>
         <input
-          type="text"
+          type="tel"
           name="phone"
           #phone="ngModel"
           [placeholder]="'Ihr Telefon*'"
           [(ngModel)]="contactData.phone"
           required
+          pattern="^[\d\s\+\-()]{7,20}$"
         />
       </label>
       <label>
@@ -37,7 +38,7 @@
 
       <label>
         <textarea
-          name="textarea"
+          name="message"
           id="message"
           placeholder="Ihre Nachricht"
           [(ngModel)]="contactData.message"

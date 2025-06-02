@@ -1,0 +1,25 @@
+.dialog-container {
+  padding: 24px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 16px;
+    color: #2e7d32; 
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
+
+  button {
+    background-color: #023019;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+
+    &:hover {
+      background-color: #023019cc;
+    }
+  }
+}
